@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no, email=no" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body class="bgeee">
+
+	<script id="tpl-footer-nav" type="text/template">
+		<div class="m-footer">
+			<ul class="m-footer-nav">
+				<li class="item">
+					<a href=""></a>
+				</li>
+				{{each button as b i}}
+				<li class="item" data-key="aa">
+					<a href="javascript:;">{{b.name}}</a>
+					<div>
+						<ul class="sub-btn-list">
+							{{each b.sub_button as sb i}}
+								<li>{{sb.name}}</li>
+							{{/each}}
+						</ul>
+					</div>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+	</script>
+
+	<script id="tpl-panel" type="text/template">
+		<section class="m-panel">
+			<div class="m-panel-main-article">
+				<a href="" style="background-image:url({{articles[0].picture}});">
+					<div class="m-panel-tips">
+						<p>{{articles[0].title}}</p>
+					</div>
+				</a>
+			</div>
+			<ul class="m-panel-article-list">
+				{{each articles as artcile i}}
+					{{if i >= 1}}
+						<li>
+							<a href="">
+								<p>{{artcile.title}}</p>
+								<img src="{{artcile.picture}}">
+							</a>	
+						</li>
+					{{/if}}
+				{{/each}}
+			</ul>
+			<a class="m-panel-btn-tatal" href="javascript:;">查看全部</a>
+		</section>
+	</script>
+
+	<div class="m-content" id="js-m-content"></div>
+	<div id="container"></div>
+	
+	<script type="text/javascript" src="js/template.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/tips.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
