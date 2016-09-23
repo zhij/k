@@ -19,12 +19,12 @@
 					<a href=""></a>
 				</li>
 				{{each button as b i}}
-				<li class="item" data-key="aa">
+				<li class="item">
 					<a href="javascript:;">{{b.name}}</a>
 					<div>
 						<ul class="sub-btn-list">
 							{{each b.sub_button as sb i}}
-								<li>{{sb.name}}</li>
+								<li data-key="{{sb.key}}">{{sb.name}}</li>
 							{{/each}}
 						</ul>
 					</div>
@@ -39,7 +39,7 @@
 			<div class="m-panel-main-article">
 				<a href="" style="background-image:url({{articles[0].picture}});">
 					<div class="m-panel-tips">
-						<p>{{articles[0].title}}</p>
+						<p>{{articles[0].title}}<span class="m-panel-price"><i>¥</i>23.32</span></p>
 					</div>
 				</a>
 			</div>
