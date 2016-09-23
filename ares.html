@@ -17,7 +17,7 @@
 	</style>
 </head>
 <body>
-	<div class="center" id="center">
+	<div id="center">
 	</div>
 
 	<script type="text/javascript" src="js/jquery.min.js"></script>
@@ -25,6 +25,8 @@
     <script type="text/javascript" src="tpl/ares/build/template.js"></script>
 
 	<script type="text/javascript" src="js/ares.js"></script>
+	<script type="text/javascript" src="js/aresScore.js"></script>
+	<script type="text/javascript" src="js/aresStore.js"></script>
 
     <script>
         // 全局数据 
@@ -37,6 +39,8 @@
 		// 路由配置
 		var routes = {
 			ares: aresRouteEntry,
+			aresScore: aresScoreRouteEntry,
+			aresStore: aresStoreRouteEntry,
 		}
 		var router = Router(routes);
 
