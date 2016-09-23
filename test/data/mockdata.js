@@ -256,7 +256,7 @@ function generateObj () {
                 ratio: 20.55, // 热度百分比
             },   // 3热度情况
         },
-        aresStore: {
+        aresStores: {
             stores:[
                 {
                     store_name: '芙蓉兴盛', // 店铺名称
