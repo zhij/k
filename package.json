@@ -4,18 +4,19 @@
   "description": "",
   "main": "",
   "scripts": {
-    "watch": "grunt watch:json",
-    "clean": "rm -rf dist",
-    "start": "anywhere -p 8373",
-    "server":  "json-server ./test/data/mockdata.js --port 6330 --routes  ./test/data/routes.json --middlewares ./test/data/middleware.js ",
-    "debugServer":  "node debug json-server path ./test/data/mockdata.js --port 6330 --routes  ./test/data/routes.json --middlewares ./test/data/middleware.js ",
-    "build": "npm run clean && NODE_ENV=production webpack -p --progress --colors --profile"
+      "jsonServerInstall": "npm i json-server -g",
+      "watch": "grunt watch:json",
+      "clean": "rm -rf dist",
+      "start": "anywhere -p 8373",
+      "server":  "json-server ./test/data/mockdata.js --port 6330 --routes  ./test/data/routes.json --middlewares ./test/data/middleware.js ",
+      "debugServer":  "node debug json-server path ./test/data/mockdata.js --port 6330 --routes  ./test/data/routes.json --middlewares ./test/data/middleware.js ",
+      "build": "npm run clean && NODE_ENV=production webpack -p --progress --colors --profile"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-contrib-watch": "^1.0.0",
-    "grunt-run": "^0.6.0",
+    "grunt-run": "^0.6.0"
   }
 }

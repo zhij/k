@@ -4,62 +4,83 @@ var opResponse = {
     error: 0,
     msg: ''
 }
+
+function handleEmployee(req, res, next) {
+    var retData , tmp 
+    switch( req.query.action ) {
+        case 'card' : 
+            return res.send( mockData.aresCard ) 
+
+        case 'myScores' : 
+            return res.send( mockData.aresScore ) 
+
+        case 'myStores' : 
+            retData = clone( mockData.aresStores ) 
+            
+            if( req.query.type === 'top' ) {
+                tmp = 'up'
+            } else {
+                tmp = 'down'
+            }
+            retData.data.stores.forEach(function(item){
+                item.up_or_down = tmp 
+            })
+            return res.send( retData ) 
+        default: 
+            return next()
+    }
+}
+function handleArticle (req, res, next) {
+    var retData , tmp 
+    switch( req.query.action ) {
+        case 'menus' : 
+            return res.send( mockData.menus ) 
+
+        case 'lists' : 
+            if( req.query.type === 'recommended' ) {
+                if( req.query.key === 'relatedHardwareM' ) {
+                    res.send( mockData.recommendGoods ) 
+                } else{
+                    res.send( mockData.recommendArticle ) 
+                } 
+            } else if ( req.query.type === 'all'  ) {
+                res.send( mockData.allArticles ) 
+            }
+
+            return 
+
+        case 'view' : 
+            retData = clone( mockData.articleDetail ) 
+            retData.data.article_id = req.query.article_id
+            return res.send( retData ) 
+
+        case 'listByTags' : 
+            res.send( mockData.recommendArticle ) 
+            return 
+
+        default: 
+            return next()
+    }
+}
+
+
+
 module.exports = function (req, res, next) {
-    switch( req.path ) {
-        case '/date' : 
-            return res.send( mockData.date ) 
-        case '/list' : 
-            return returnList(req, res)
-        case '/bindCard' : 
-            return res.json( opResponse )
+    switch( req.query.controller ) {
+        case 'employee' : 
+            return handleEmployee.apply(null, arguments)
+        case 'article' : 
+            return handleArticle.apply(null, arguments)
     }
 
-    var reg = /^\/detail\/\d+$/  
-    if( reg.test(req.path) ) {
-        return returnDetail(req, res)
-    }
-
-    reg = /^\/detail\/\d+\/list$/  
-    if( reg.test(req.path) ) {
-        return returnDetailList(req, res)
-    }
-
-
-    res.send({error: 1000, msg:'Not found'})
+    return next()
 }
 
 
 
 
-function returnList(req, res){
-    var retData = clone( mockData.list ) 
-    if( req.query.date ) {
-        var date = parseInt( req.query.date ) 
-        retData.data.section[0].list.forEach(function(item){
-            item .order_num +=  date * 100  
-            item.money_num += date * 100
-        })
-    }
-    return res.send( retData ) 
-}
 
-function returnDetailList(req, res){
-    var clerkId = req.path.split('/')[2]
-    var retData = clone( mockData.detailList ) 
-    if( req.query.page && req.query.page > 1 ) {
-        retData = clone( mockData.detailList_more ) 
-    } else {
-        retData = clone( mockData.detailList ) 
-    }
-    return res.send( retData ) 
-}
 
-function returnDetail(req, res){
-    var clerkId = req.path.split('/')[2]
-    var key = 'detail_' +  clerkId
-    var retData = clone( mockData[key] ) 
-    return res.send( retData ) 
-}
 
 // 复制函数  用于复制对象
 function clone(obj) {

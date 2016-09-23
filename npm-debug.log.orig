@@ -1,0 +1,70 @@
+0 info it worked if it ends with ok
+<<<<<<< HEAD
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@2.14.4
+3 info using node@v4.1.1
+4 verbose readDependencies loading dependencies from /Users/zj/www/kba/package.json
+5 error install Couldn't read dependencies
+6 verbose stack Error: Failed to parse json
+6 verbose stack Trailing comma in object at 20:3
+6 verbose stack   }
+6 verbose stack   ^
+6 verbose stack     at parseError (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:379:11)
+6 verbose stack     at parseJson (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:68:23)
+6 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:48:5
+6 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:76:16
+6 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:380:3)
+7 verbose cwd /Users/zj/www/kba
+8 error Darwin 15.5.0
+9 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install"
+10 error node v4.1.1
+11 error npm  v2.14.4
+12 error file /Users/zj/www/kba/package.json
+13 error code EJSONPARSE
+14 error Failed to parse json
+14 error Trailing comma in object at 20:3
+14 error   }
+14 error   ^
+15 error File: /Users/zj/www/kba/package.json
+16 error Failed to parse package.json data.
+16 error package.json must be actual JSON, not just JavaScript.
+16 error
+16 error This is not a bug in npm.
+16 error Tell the package author to fix their package.json file. JSON.parse
+17 verbose exit [ 1, true ]
+=======
+1 verbose cli [ '/usr/local/share/node-v5.2.0-linux-x64/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'run',
+1 verbose cli   'server' ]
+2 info using npm@3.3.12
+3 info using node@v5.2.0
+4 verbose stack Error: Failed to parse json
+4 verbose stack Trailing comma in object at 21:3
+4 verbose stack   }
+4 verbose stack   ^
+4 verbose stack     at parseError (/usr/local/share/node-v5.2.0-linux-x64/lib/node_modules/npm/node_modules/read-package-json/read-json.js:379:11)
+4 verbose stack     at parseJson (/usr/local/share/node-v5.2.0-linux-x64/lib/node_modules/npm/node_modules/read-package-json/read-json.js:68:23)
+4 verbose stack     at /usr/local/share/node-v5.2.0-linux-x64/lib/node_modules/npm/node_modules/read-package-json/read-json.js:48:5
+4 verbose stack     at /usr/local/share/node-v5.2.0-linux-x64/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:76:16
+4 verbose stack     at tryToString (fs.js:415:3)
+4 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:402:12)
+5 verbose cwd /home/zja/Workspace/kbaH5
+6 error Linux 3.13.0-32-generic
+7 error argv "/usr/local/share/node-v5.2.0-linux-x64/bin/node" "/usr/local/bin/npm" "run" "server"
+8 error node v5.2.0
+9 error npm  v3.3.12
+10 error file /home/zja/Workspace/kbaH5/package.json
+11 error code EJSONPARSE
+12 error Failed to parse json
+12 error Trailing comma in object at 21:3
+12 error   }
+12 error   ^
+13 error File: /home/zja/Workspace/kbaH5/package.json
+14 error Failed to parse package.json data.
+14 error package.json must be actual JSON, not just JavaScript.
+14 error
+14 error This is not a bug in npm.
+14 error Tell the package author to fix their package.json file. JSON.parse
+15 verbose exit [ 1, true ]
+>>>>>>> f968ca295c1abd4782fd154e3f827ba635e677d0
