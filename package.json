@@ -5,6 +5,7 @@
   "main": "",
   "scripts": {
       "jsonServerInstall": "npm i json-server -g",
+      "tmodJsInstall":"npm install -g tmodjs",
       "watch": "grunt watch:json",
       "clean": "rm -rf dist",
       "start": "anywhere -p 8373",
