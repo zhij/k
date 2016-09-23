@@ -52,6 +52,7 @@ var data = {
 		}
 	]
 }
+
 var html = template('tpl-artcle-list',data);
 $('#container').html(html);
 setTimeout(function(){
