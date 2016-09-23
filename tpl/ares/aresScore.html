@@ -1,0 +1,58 @@
+<div>
+    <a class="ico-home"></a>
+    <div class="r-h1">拓展店数：<span class="r-h1-num">{{new_stores_num }}间</span></div>
+    <div class="r-h2"><span class="r-h2-num1 up">共{{ heat }}°C</span><span class="r-h2-num2">占比{{proportion}}%</span></div>
+    <div class="r-h3">击败全国<span class="r-h3-num">{{ beat_num }}%</span>的战神</div>
+    {{ include './ares'}}
+    <div class="r-title">队内热度占比</div>
+    <div class="circle-group">
+        <div class="circle-wp mr">
+            <div class="circle circle_1">
+                <div class="pie_left"><div class="left"></div></div>
+                <div class="pie_right"><div class="right"></div></div>
+                <div class="mask"><i>1°C</i><span>{{ one_heat.ratio }}</span>%</div>
+                <div class="des">
+                    <p class="p2">{{ one_heat.number }}°C</p>
+                    <p class="p1">在队内排第{{ one_heat.rank }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="circle-wp fl">
+            <div class="circle circle_2">
+                <div class="pie_left"><div class="left"></div></div>
+                <div class="pie_right"><div class="right"></div></div>
+                <div class="mask"><i>2°C</i><span>{{ two_heat.ratio }}</span>%</div>
+                <div class="des">
+                    <p class="p2">{{ two_heat.number }} °C</p>
+                    <p class="p1">在队内排第{{ two_heat.rank }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="circle-wp fr">
+            <div class="circle circle_3">
+                <div class="pie_left"><div class="left"></div></div>
+                <div class="pie_right"><div class="right"></div></div>
+                <div class="mask"><i>3°C</i><span>{{ three_heat.ratio }}</span>%</div>
+                <div class="des">
+                    <p class="p2">{{ three_heat.number }} °C</p>
+                    <p class="p1">在队内排第{{ three_heat.rank }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

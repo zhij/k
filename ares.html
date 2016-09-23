@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no, email=no" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style type="text/css">
+		html, body {
+			height: 100%;
+			background-color: #000;
+		}
+	</style>
+</head>
+<body>
+	<div class="center" id="center">
+	</div>
+
+    <script src="tpl/build/template.js"></script>
+    <script>
+            var data = {
+                partner_id: 12345, // 战队id
+                employee_sn: 012, // 战神编号
+
+                partner_name: '广州1队', // 战队名称
+                employee_name: '刘大成',  // 战神姓名
+                employee_avatar: 'img/header.png', // 战神头像url
+                rank: 1,  // 战神排名
+                development: 4, // 开拓力
+                leadership: 5, // 领导力
+                influence: 3, // 影响力
+                star_num:  4, // 星星个数
+
+                new_stores_num: 1000, // 拓展店数
+                heat: 5016, //热度
+                proportion: 39, //占比
+                beat_num: 70, //击败全国战神数
+                one_heat: {
+                    rank: 10, // 热度对内排名
+                    number: 3420, // 热度数量
+                    ratio: 30.55, // 热度百分比
+                },   // 1热度情况
+                two_heat: {
+                    rank: 8, // 热度对内排名
+                    number: 3986, // 热度数量
+                    ratio: 20.55, // 热度百分比
+                },   // 2热度情况
+                three_heat: {
+                    rank: 4, // 热度对内排名
+                    number: 3290, // 热度数量
+                    ratio: 20.55, // 热度百分比
+                },   // 3热度情况
+            }
+
+            html = template('aresScore', data  );
+            document.getElementById('center').innerHTML = html;
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
