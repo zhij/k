@@ -1,32 +1,32 @@
 <div class="show-bg up">
     <div class="no">{{ rank }}</div>
-    <div class="name">{{partner_name + ' ' + employee_sn + ' '+ employee_name  }} </div>
+    <div class="name">{{ partner_name + ' ' + employee_sn + ' '+ employee_name  }} </div>
     <img class="header" src="{{ employee_avatar}}">
     <div class="pro-group">
         <div class="pro-item">
-            <label>{{ development }}</label>
-            <div class="pro-bg">
-                <div class="pro"></div>
+            <label>开拓力</label>
+            <div class="pro-bg ">
+                <div class="pro" style="width:{{development}}%"></div>
                 <div class="pro-line"></div>
             </div>
         </div>
         <div class="pro-item">
-            <label>{{ leadership }}</label>
-            <div class="pro-bg">
-                <div class="pro"></div>
+            <label>领导力</label>
+            <div class="pro-bg" >
+                <div class="pro" style="width:{{ leadership }}%"></div>
                 <div class="pro-line"></div>
             </div>
         </div>
         <div class="pro-item">
-            <label>{{ influence }}</label>
-            <div class="pro-bg">
-                <div class="pro"></div>
+            <label>影响力</label>
+            <div class="pro-bg" >
+                <div class="pro" style="width:{{ influence }}%"></div>
                 <div class="pro-line"></div>
             </div>
         </div>
     </div>
     <div class="star-group">
-        {{each starts }}
+        {{each stars }}
             <img src="img/ico-star.png">
         {{/each}}
     </div>

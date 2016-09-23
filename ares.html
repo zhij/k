@@ -20,44 +20,27 @@
 	<div class="center" id="center">
 	</div>
 
-    <script src="tpl/ares/build/template.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/director.min.js"></script>
+    <script type="text/javascript" src="tpl/ares/build/template.js"></script>
+
+	<script type="text/javascript" src="js/ares.js"></script>
+
     <script>
-            var data = {
-                partner_id: 12345, // 战队id
-                employee_sn: 012, // 战神编号
+        // 全局数据 
+        // 需要渲染
+        var partner_id = '12345';
+        var employee_sn = '012';
 
-                partner_name: '广州1队', // 战队名称
-                employee_name: '刘大成',  // 战神姓名
-                employee_avatar: 'img/header.png', // 战神头像url
-                rank: 1,  // 战神排名
-                development: 4, // 开拓力
-                leadership: 5, // 领导力
-                influence: 3, // 影响力
-                star_num:  4, // 星星个数
+        var gData = {};
 
-                new_stores_num: 1000, // 拓展店数
-                heat: 5016, //热度
-                proportion: 39, //占比
-                beat_num: 70, //击败全国战神数
-                one_heat: {
-                    rank: 10, // 热度对内排名
-                    number: 3420, // 热度数量
-                    ratio: 30.55, // 热度百分比
-                },   // 1热度情况
-                two_heat: {
-                    rank: 8, // 热度对内排名
-                    number: 3986, // 热度数量
-                    ratio: 20.55, // 热度百分比
-                },   // 2热度情况
-                three_heat: {
-                    rank: 4, // 热度对内排名
-                    number: 3290, // 热度数量
-                    ratio: 20.55, // 热度百分比
-                },   // 3热度情况
-            }
+		// 路由配置
+		var routes = {
+			ares: aresRouteEntry,
+		}
+		var router = Router(routes);
 
-            html = template('aresScore', data  );
-            document.getElementById('center').innerHTML = html;
+		router.init(['/ares']);
     </script>
 </body>
 </html>

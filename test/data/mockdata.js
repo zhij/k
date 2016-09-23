@@ -228,9 +228,9 @@ function generateObj () {
             employee_name: '刘大成',  // 战神姓名
             employee_avatar: 'img/header.png', // 战神头像url
             rank: 1,  // 战神排名
-            development: 4, // 开拓力
-            leadership: 5, // 领导力
-            influence: 3, // 影响力
+            development: 70, // 开拓力
+            leadership: 50, // 领导力
+            influence: 80, // 影响力
             star_num:  4, // 星星个数
         },
         aresScore: {
