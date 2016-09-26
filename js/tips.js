@@ -68,33 +68,33 @@ $(function(){
 	
 	//文章详情
 
-	$.ajax({
-		type: "GET",
-		url: "http://localhost:6330/articleDetail",
-		dataType: "json",
-		data: '',
-		success: function(data){
-			if(data.error == 0){
-				console.dir(data.data);
-				var html = template("tpl-artcile-wrapper", data.data);
-				$("#view-page").html(html);
-			}
-		}
-	});
+	// $.ajax({
+	// 	type: "GET",
+	// 	url: "http://localhost:6330/articleDetail",
+	// 	dataType: "json",
+	// 	data: '',
+	// 	success: function(data){
+	// 		if(data.error == 0){
+	// 			console.dir(data.data);
+	// 			var html = template("tpl-artcile-wrapper", data.data);
+	// 			$("#view-page").html(html);
+	// 		}
+	// 	}
+	// });
 
-	$.ajax({
-		type: "GET",
-		url: "http://localhost:6330/recommendArticle",
-		dataType: "json",
-		data: '',
-		success: function(data){
-			if(data.error == 0){
-				console.dir(data.data);
-				var html = template("tpl-artcile-guess-you-like", data.data);
-				$("#view-page").append(html);
-			}
-		}
-	});
+	// $.ajax({
+	// 	type: "GET",
+	// 	url: "http://localhost:6330/recommendArticle",
+	// 	dataType: "json",
+	// 	data: '',
+	// 	success: function(data){
+	// 		if(data.error == 0){
+	// 			console.dir(data.data);
+	// 			var html = template("tpl-artcile-guess-you-like", data.data);
+	// 			$("#view-page").append(html);
+	// 		}
+	// 	}
+	// });
 	
 })
 
