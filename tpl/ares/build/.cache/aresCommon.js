@@ -1,7 +1,7 @@
-/*TMODJS:{"version":5,"md5":"36e7e4c9e8b1bddcb5198f6c5bd84a3c"}*/
+/*TMODJS:{"version":4,"md5":"bbaa247fc0cd7dba4a90707080cb7a11"}*/
 template('aresCommon',function($data,$filename
 /**/) {
-'use strict';var $utils=this,$helpers=$utils.$helpers,$escape=$utils.$escape,rank=$data.rank,partner_name=$data.partner_name,employee_sn=$data.employee_sn,employee_name=$data.employee_name,employee_avatar=$data.employee_avatar,development=$data.development,leadership=$data.leadership,influence=$data.influence,$each=$utils.$each,stars=$data.stars,$value=$data.$value,$index=$data.$index,$out='';$out+='<div class="show-bg up"> <div class="no">';
+'use strict';var $utils=this,$helpers=$utils.$helpers,$escape=$utils.$escape,rank=$data.rank,partner_name=$data.partner_name,employee_sn=$data.employee_sn,employee_name=$data.employee_name,employee_avatar=$data.employee_avatar,development=$data.development,leadership=$data.leadership,influence=$data.influence,$each=$utils.$each,stars=$data.stars,$value=$data.$value,$index=$data.$index,$out='';$out+='<div class="show-bg up" > <div class="no">';
 $out+=$escape(rank);
 $out+='</div> <div class="name">';
 $out+=$escape(partner_name + ' ' + employee_sn + ' '+ employee_name);

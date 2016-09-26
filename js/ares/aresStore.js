@@ -24,7 +24,8 @@ AresStore.prototype.init = function(){
 
 
 AresStore.prototype.getData = function(){
-    var url = '//localhost:6330/index.php';
+    var url = URL_PREFIX + '/index.php';
+
     var urlObj = {
         controller: 'employee', 
         action: 'myStores',
