@@ -19,7 +19,7 @@ AresScore.prototype.init = function(){
 
 
 AresScore.prototype.getData = function(){
-    var url = '//localhost:6330/index.php';
+    var url = URL_PREFIX + '/index.php';
     var urlObj = {
         controller: 'employee', 
         action: 'card'
@@ -80,9 +80,11 @@ AresScore.prototype.render = function(){
 }
 
 function aresScoreRouteEntry (){
+    console.log('aresScoreRouteEntry')
     if( ! gData.aresScore ) {
         gData.aresScore =  new AresScore(partner_id, employee_sn)
     }
     gData.aresScore.init()
 }
+
 module.exports = aresScoreRouteEntry 

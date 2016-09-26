@@ -44,6 +44,7 @@ var webpackConfig = {
     },
 
     devtool: 'source-map',
+    //devtool: 'eval',
     //plugins: [   
         //new webpack.ProvidePlugin({
             //$: "jquery",
@@ -65,7 +66,6 @@ if (process.env.NODE_ENV === 'production') {
             ],
         },
     });
-
 }else{
     webpackConfig = merge(webpackConfig,{
         entry :{
