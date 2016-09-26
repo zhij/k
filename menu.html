@@ -9,6 +9,11 @@
 	<meta name="format-detection" content="telephone=no, email=no" />
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style type="text/css">
+		html, body {
+			min-height: 100%;
+		}
+	</style>
 </head>
 <body class="bgeee">
 
@@ -58,9 +63,54 @@
 			<a class="m-panel-btn-tatal" href="javascript:;">查看全部</a>
 		</section>
 	</script>
+	
+	<script id="tpl-artcile-wrapper" type="text/html">
+		<div class="artcile-wrapper">
+			<h1 class="artcile-title">{{title}}</h1>
+			<div class="artcile-top">
+				<span class="artcile-posted-time">{{post_date}}</span>
+				{{each tags as tag i}}
+					<span class="artcile-ico-tag">{{tag.name}}</span>
+				{{/each}}
+			</div>
+			<div class="artcile-content">
+				{{#content}}
+			</div>
+			<div class="artcile-bottom">
+				<img class="app-qrcode" src="img/app-qrcode.png" alt="">
+				<p>
+					<span class="num1">阅读 1234</span>
+					<span class="num2">244</span>
+				</p>
+			</div>
+		</div>
+	</script>
+	<script id="tpl-artcile-guess-you-like" type="text/html">
+		<div class="artcile-guess-title">
+			<span>推荐文章／别再错过</span>
+			<div class="hr"></div>
+		</div>
+		<div class="artcile-guess-you-like">
+			<ul class="artcile-guess-you-like-list">
+			{{each articles as artcle i}}
+				<li>
+					<a href="">
+						<div class="l-artcle-list-info">
+							<p>{{artcle.title}}</p>
+						</div>
+						<img src="{{artcle.picture}}">
+					</a>
+				</li>
+			{{/each}}
+			</ul>
+		</div>
+	</script>
 
-	<div class="m-content" id="js-m-content"></div>
-	<div id="container"></div>
+	<div id="view-page">
+		<div class="m-content" id="js-m-content"></div>
+		<div id="container"></div>	
+	</div>
+	
 	
 	<script type="text/javascript" src="js/template.js"></script>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
