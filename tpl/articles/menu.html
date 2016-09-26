@@ -1,0 +1,19 @@
+<div class="m-footer">
+	<ul class="m-footer-nav">
+		<li class="item">
+			<a href=""></a>
+		</li>
+		{{each button as b i}}
+		<li class="item">
+			<a href="javascript:;">{{b.name}}</a>
+			<div>
+				<ul class="sub-btn-list">
+					{{each b.sub_button as sb i}}
+						<li data-key="{{sb.key}}">{{sb.name}}</li>
+					{{/each}}
+				</ul>
+			</div>
+		</li>
+		{{/each}}
+	</ul>
+</div>
