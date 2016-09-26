@@ -1,0 +1,18 @@
+<div class="artcile-guess-title">
+	<span>推荐文章／别再错过</span>
+	<div class="hr"></div>
+</div>
+<div class="artcile-guess-you-like">
+	<ul class="artcile-guess-you-like-list">
+	{{each articles as artcle i}}
+		<li>
+			<a href="">
+				<div class="l-artcle-list-info">
+					<p>{{artcle.title}}</p>
+				</div>
+				<img src="{{artcle.picture}}">
+			</a>
+		</li>
+	{{/each}}
+	</ul>
+</div>

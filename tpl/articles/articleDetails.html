@@ -1,0 +1,20 @@
+<a href="" class="ico-home"></a>
+<div class="artcile-wrapper">
+	<h1 class="artcile-title">{{title}}</h1>
+	<div class="artcile-top">
+		<span class="artcile-posted-time">{{post_date}}</span>
+		{{each tags as tag i}}
+			<span class="artcile-ico-tag">{{tag.name}}</span>
+		{{/each}}
+	</div>
+	<div class="artcile-content">
+		{{#content}}
+	</div>
+	<div class="artcile-bottom">
+		<img class="app-qrcode" src="img/app-qrcode.png" alt="">
+		<p>
+			<span class="num1">阅读 1234</span>
+			<span class="num2">244</span>
+		</p>
+	</div>
+</div>

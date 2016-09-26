@@ -38,7 +38,7 @@ $(function(){
 		success: function(data){
 			if(data.error == 0){
 				data.button = data.data.button;
-				var html = template("tpl-footer-nav", data);
+				var html = template("menu", data);
 				$("#container").html(html);
 				init();
 			}
@@ -54,7 +54,7 @@ $(function(){
 			success: function(data){
 				if(data.error == 0){
 					data.articles = data.data.articles;
-					var html = template("tpl-panel", data);
+					var html = template("panel", data);
 					$(".m-content").append(html);
 					$(window).scrollTop(document.documentElement.scrollHeight);
 				}
@@ -68,33 +68,33 @@ $(function(){
 	
 	//文章详情
 
-	$.ajax({
-		type: "GET",
-		url: "http://localhost:6330/articleDetail",
-		dataType: "json",
-		data: '',
-		success: function(data){
-			if(data.error == 0){
-				console.dir(data.data);
-				var html = template("tpl-artcile-wrapper", data.data);
-				$("#view-page").html(html);
-			}
-		}
-	});
+	// $.ajax({
+	// 	type: "GET",
+	// 	url: "http://localhost:6330/articleDetail",
+	// 	dataType: "json",
+	// 	data: '',
+	// 	success: function(data){
+	// 		if(data.error == 0){
+	// 			console.dir(data.data);
+	// 			var html = template("tpl-artcile-wrapper", data.data);
+	// 			$("#view-page").html(html);
+	// 		}
+	// 	}
+	// });
 
-	$.ajax({
-		type: "GET",
-		url: "http://localhost:6330/recommendArticle",
-		dataType: "json",
-		data: '',
-		success: function(data){
-			if(data.error == 0){
-				console.dir(data.data);
-				var html = template("tpl-artcile-guess-you-like", data.data);
-				$("#view-page").append(html);
-			}
-		}
-	});
+	// $.ajax({
+	// 	type: "GET",
+	// 	url: "http://localhost:6330/recommendArticle",
+	// 	dataType: "json",
+	// 	data: '',
+	// 	success: function(data){
+	// 		if(data.error == 0){
+	// 			console.dir(data.data);
+	// 			var html = template("tpl-artcile-guess-you-like", data.data);
+	// 			$("#view-page").append(html);
+	// 		}
+	// 	}
+	// });
 	
 })
 

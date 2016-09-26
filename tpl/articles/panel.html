@@ -1,0 +1,22 @@
+<section class="m-panel">
+	<div class="m-panel-main-article">
+		<a href="#/articleDetails" style="background-image:url({{articles[0].picture}});">
+			<div class="m-panel-tips">
+				<p>{{articles[0].title}}<span class="m-panel-price"><i>¥</i>23.32</span></p>
+			</div>
+		</a>
+	</div>
+	<ul class="m-panel-article-list">
+		{{each articles as artcile i}}
+			{{if i >= 1}}
+				<li>
+					<a href="">
+						<p>{{artcile.title}}</p>
+						<img src="{{artcile.picture}}">
+					</a>	
+				</li>
+			{{/if}}
+		{{/each}}
+	</ul>
+	<a class="m-panel-btn-tatal" href="javascript:;">查看全部</a>
+</section>

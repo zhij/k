@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no, email=no" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style type="text/css">
+		html, body {
+			min-height: 100%;
+		}
+	</style>
+</head>
+<body class="bgeee">
+	<div id="view-page"></div>
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/director.min.js"></script>
+    <script type="text/javascript" src="tpl/articles/build/template.js"></script>
+	
+	<script type="text/javascript" src="js/menu.js"></script>
+	<script type="text/javascript" src="js/articleDetails.js"></script>
+
+	 <script>
+        // 全局数据 
+        // 需要渲染
+        var partner_id = '12345';
+        var employee_sn = '012';
+
+        var gData = {};
+
+		// 路由配置
+		var routes = {
+			menu: menuRouteEntry,
+			articleDetails: articleDetailsRouterEntry,
+		}
+		var router = Router(routes);
+
+		router.init(['/menu']);
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
