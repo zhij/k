@@ -45,9 +45,12 @@ Ares.prototype.render = function(){
     document.getElementById('center').innerHTML = html;
 }
 
+
 function aresRouteEntry (){
     if( ! gData.ares ) {
         gData.ares =  new Ares(partner_id, employee_sn)
     }
     gData.ares.init()
 }
+
+module.exports = aresRouteEntry

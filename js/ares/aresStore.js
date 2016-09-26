@@ -101,3 +101,4 @@ function aresStoreRouteEntry (){
 
 
 
+module.exports = aresStoreRouteEntry;

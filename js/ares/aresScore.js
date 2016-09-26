@@ -85,3 +85,4 @@ function aresScoreRouteEntry (){
     }
     gData.aresScore.init()
 }
+module.exports = aresScoreRouteEntry 
