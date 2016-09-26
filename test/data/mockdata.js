@@ -228,9 +228,9 @@ function generateObj () {
             employee_name: '刘大成',  // 战神姓名
             employee_avatar: 'img/header.png', // 战神头像url
             rank: 1,  // 战神排名
-            development: 4, // 开拓力
-            leadership: 5, // 领导力
-            influence: 3, // 影响力
+            development: 70, // 开拓力
+            leadership: 50, // 领导力
+            influence: 80, // 影响力
             star_num:  4, // 星星个数
         },
         aresScore: {
@@ -238,8 +238,7 @@ function generateObj () {
             employee_sn: 012, // 战神编号
             new_stores_num: 1000, // 拓展店数
             heat: 5016, //热度
-            proportion: 39, //占比
-            beat_num: 70, //击败全国战神数
+            beat_ratio: 70, //击败全国战神数
             one_heat: {
                 rank: 10, // 热度对内排名
                 number: 3420, // 热度数量
@@ -259,51 +258,61 @@ function generateObj () {
         aresStores: {
             stores:[
                 {
+                    store_id: '111',
                     store_name: '芙蓉兴盛', // 店铺名称
                     proportion: '7.48',  // 环比
                     up_or_down: 'up',  // 升或降, up为升 down为降
                 },
                 {
+                    store_id: '112',
                     store_name: '武汉周黑鸭', // 店铺名称
                     proportion: '7.48',  // 环比
                     up_or_down: 'up',  // 升或降, up为升 down为降
                 },
                 {
+                    store_id: '113',
                     store_name: '橘果子', // 店铺名称
                     proportion: '7.48',  // 环比
                     up_or_down: 'down',  // 升或降, up为升 down为降
                 },
                 {
+                    store_id: '114',
                     store_name: '7-11便利店', // 店铺名称
                     proportion: '7.48',  // 环比
                     up_or_down: 'up',  // 升或降, up为升 down为降
                 },
                 {
+                    store_id: '115',
                     store_name: '7-11便利店', // 店铺名称
                     proportion: '7.48',  // 环比
                     up_or_down: 'up',  // 升或降, up为升 down为降
                 },
                 {
+                    store_id: '116',
                     store_name: '橘果子', // 店铺名称
                     proportion: '7.48',  // 环比
                     up_or_down: 'down',  // 升或降, up为升 down为降
                 },
                 {
+                    store_id: '117',
                     store_name: '7-11便利店', // 店铺名称
                     proportion: '7.48',  // 环比
                     up_or_down: 'up',  // 升或降, up为升 down为降
                 },
                 {
+                    store_id: '118',
                     store_name: '7-11便利店', // 店铺名称
                     proportion: '7.48',  // 环比
                     up_or_down: 'up',  // 升或降, up为升 down为降
                 },
                 {
+                    store_id: '119',
                     store_name: '芙蓉兴盛', // 店铺名称
                     proportion: '7.48',  // 环比
                     up_or_down: 'up',  // 升或降, up为升 down为降
                 },
                 {
+                    store_id: '120',
                     store_name: '武汉周黑鸭', // 店铺名称
                     proportion: '7.48',  // 环比
                     up_or_down: 'up',  // 升或降, up为升 down为降

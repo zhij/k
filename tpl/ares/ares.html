@@ -1,36 +1,6 @@
-<div class="show-bg up">
-    <div class="no">{{ rank }}</div>
-    <div class="name">{{partner_name + ' ' + employee_sn + ' '+ employee_name  }} </div>
-    <img class="header" src="{{ employee_avatar}}">
-    <div class="pro-group">
-        <div class="pro-item">
-            <label>{{ development }}</label>
-            <div class="pro-bg">
-                <div class="pro"></div>
-                <div class="pro-line"></div>
-            </div>
-        </div>
-        <div class="pro-item">
-            <label>{{ leadership }}</label>
-            <div class="pro-bg">
-                <div class="pro"></div>
-                <div class="pro-line"></div>
-            </div>
-        </div>
-        <div class="pro-item">
-            <label>{{ influence }}</label>
-            <div class="pro-bg">
-                <div class="pro"></div>
-                <div class="pro-line"></div>
-            </div>
-        </div>
-    </div>
-    <div class="star-group">
-        {{each starts }}
-            <img src="img/ico-star.png">
-        {{/each}}
-    </div>
-</div>
+<div class="center" >
+    {{ include './aresCommon'}}
+
 <img class="show-bg-bottom" src="img/show-bg-bottom.png">
 <div class="i-button-group">
     <a class="btn" href="">我是谁</a>
@@ -43,6 +13,10 @@
 <div class="line4"></div>
 <div class="line5"></div>
 <div class="line6"></div>
+
+</div>
+
+
 
 
 
