@@ -18,29 +18,22 @@
 <body class="bgeee">
 	<div id="view-page"></div>
 
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/director.min.js"></script>
+	<script type="text/javascript" src="js/other/jquery.min.js"></script>
+    <script type="text/javascript" src="js/other/director.min.js"></script>
+
     <script type="text/javascript" src="tpl/articles/build/template.js"></script>
-	
-	<script type="text/javascript" src="js/menu.js"></script>
-	<script type="text/javascript" src="js/articleDetails.js"></script>
+
+    <script type="text/javascript" src="js/dist/article.bundle.js"></script>
+	<!--<script type="text/javascript" src="js/menu.js"></script>-->
+	<!--<script type="text/javascript" src="js/articleDetails.js"></script>-->
 
 	 <script>
         // 全局数据 
         // 需要渲染
         var partner_id = '12345';
         var employee_sn = '012';
-
         var gData = {};
 
-		// 路由配置
-		var routes = {
-			menu: menuRouteEntry,
-			articleDetails: articleDetailsRouterEntry,
-		}
-		var router = Router(routes);
-
-		router.init(['/menu']);
     </script>
 </body>
 </html>

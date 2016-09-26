@@ -28,3 +28,5 @@ function articleDetailsRouterEntry(){
 		}
 	});
 }
+
+module.exports = articleDetailsRouterEntry;

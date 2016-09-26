@@ -51,7 +51,7 @@ function renderArticles(){
 		data.sections.forEach(function(item){
 			html += template("panel", item)
 		})
-		$(".m-content").append(html);
+		$(".m-content").html(html);
 		$(window).scrollTop(document.documentElement.scrollHeight);
 	}
 }
@@ -96,6 +96,7 @@ function menuRouteEntry(){
 
 
 
+module.exports = menuRouteEntry;
 
 
 

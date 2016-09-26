@@ -60,8 +60,8 @@ if (process.env.NODE_ENV === 'production') {
             ares:  [
                 './js/ares',
             ],
-            articles:  [
-                './js/articles',
+            article:  [
+                './js/article',
             ],
         },
     });
@@ -74,10 +74,10 @@ if (process.env.NODE_ENV === 'production') {
                 'webpack/hot/only-dev-server',
                 './js/ares',
             ],
-            articles:  [
+            article:  [
                 'webpack-dev-server/client?http://localhost:3109',
                 'webpack/hot/only-dev-server',
-                './js/articles',
+                './js/article',
             ],
         } ,
         plugins : [
