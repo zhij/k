@@ -3,3 +3,5 @@ node_modules/
 css/.sass-cache/
 else/
 npm-debug.log
+tpl/*/build/.cache/
+js/dist/

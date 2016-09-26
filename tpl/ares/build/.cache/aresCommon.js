@@ -1,4 +1,4 @@
-/*TMODJS:{"version":2,"md5":"36e7e4c9e8b1bddcb5198f6c5bd84a3c"}*/
+/*TMODJS:{"version":5,"md5":"36e7e4c9e8b1bddcb5198f6c5bd84a3c"}*/
 template('aresCommon',function($data,$filename
 /**/) {
 'use strict';var $utils=this,$helpers=$utils.$helpers,$escape=$utils.$escape,rank=$data.rank,partner_name=$data.partner_name,employee_sn=$data.employee_sn,employee_name=$data.employee_name,employee_avatar=$data.employee_avatar,development=$data.development,leadership=$data.leadership,influence=$data.influence,$each=$utils.$each,stars=$data.stars,$value=$data.$value,$index=$data.$index,$out='';$out+='<div class="show-bg up"> <div class="no">';

@@ -1,4 +1,4 @@
-/*TMODJS:{"version":5,"md5":"9f6caf2d91b8d5f0bb1a15f0140d198c"}*/
+/*TMODJS:{"version":11,"md5":"9f6caf2d91b8d5f0bb1a15f0140d198c"}*/
 template('aresScore',function($data,$filename
 /**/) {
 'use strict';var $utils=this,$helpers=$utils.$helpers,$escape=$utils.$escape,new_stores_num=$data.new_stores_num,heat=$data.heat,beat_ratio=$data.beat_ratio,include=function(filename,data){data=data||$data;var text=$utils.$include(filename,data,$filename);$out+=text;return $out;},one_heat=$data.one_heat,two_heat=$data.two_heat,three_heat=$data.three_heat,$out='';$out+='<div> <a class="ico-home"></a> <div class="r-h1">拓展店数：<span class="r-h1-num">';
