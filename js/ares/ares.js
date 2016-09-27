@@ -16,6 +16,8 @@ Ares.prototype.init = function(){
 Ares.prototype.getData = function(){
     var url = URL_PREFIX + '/index.php';
     var urlObj = {
+        partner_id: this.id, 
+        employee_sn : this.sn,
         controller: 'employee', 
         action: 'card'
     }
@@ -47,15 +49,10 @@ Ares.prototype.render = function(){
 
 
 function aresRouteEntry (){
-    try{
-        if( ! gData.ares ) {
-            gData.ares =  new Ares(partner_id, employee_sn)
-        }
-        gData.ares.init()
-
-    } catch(e) {
-        alert(e.message + '  ' + e.stack) 
+    if( ! gData.ares ) {
+        gData.ares =  new Ares(gPartner_id, gEmployee_sn)
     }
+    gData.ares.init()
 }
 
 module.exports = aresRouteEntry
