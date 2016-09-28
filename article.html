@@ -8,29 +8,33 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 	<meta name="format-detection" content="telephone=no, email=no" />
 	<title></title>
-    <!--<script src="http://192.168.1.113:8180/target/target-script-min.js#anonymous"></script>-->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style type="text/css">
+		html, body {
+			min-height: 100%;
+		}
+	</style>
 </head>
-<body class="bg000">
-	<div id="center"></div>
+<body class="bgeee">
+	<div id="view-page"></div>
 
 	<script type="text/javascript" src="js/other/jquery.min.js"></script>
     <script type="text/javascript" src="js/other/director.min.js"></script>
-    <script type="text/javascript" src="tpl/ares/build/template.js"></script>
 
-    <script>
+    <script type="text/javascript" src="tpl/articles/build/template.js"></script>
+
+    <script type="text/javascript" src="js/dist/article.bundle.js"></script>
+	<!--<script type="text/javascript" src="js/menu.js"></script>-->
+	<!--<script type="text/javascript" src="js/articleDetails.js"></script>-->
+
+	 <script>
         // 全局数据 
         // 需要渲染
-        var gPartner_id = '2879720';
-        var gEmployee_sn = '015';
-
+        var partner_id = '12345';
+        var employee_sn = '012';
         var gData = {};
-        // var URL_PREFIX='//localhost:6330'
-         var URL_PREFIX=''
+
     </script>
-
-    <script type="text/javascript" src="js/dist/ares.bundle.js"></script>
-
 </body>
 </html>
 

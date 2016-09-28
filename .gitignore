@@ -1,5 +1,9 @@
+*.orig
+
 node_modules/
 .sass-cache/
 css/.sass-cache/
 else/
 npm-debug.log
+tpl/*/build/
+js/dist/
