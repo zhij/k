@@ -16,9 +16,21 @@ function init(){
 	// 底部 子菜单
 	$(".sub-btn-list li").click(function(e){
 		e.stopPropagation();
-		var key = $(this).attr("data-key");
 		hideMenuItem();
-		getArticles(key);
+
+		//var key = $(this).attr("data-key");
+		var type = $(this).data("type");
+        var key, url;
+        switch( type ) {
+            case 'click' : 
+                key = $(this).data("key");
+                getArticles(key);
+                break
+            case 'view' : 
+                url = $(this).data("url");
+                window.location.href = url;
+                break
+        }
 	})
 
 
