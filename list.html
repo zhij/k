@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no, email=no" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body class="bgeee">
+	<div id="container"></div>
+	<script id="tpl-artcle-list" type="text/template">
+		<div class="l-list">
+			<a href="" class="ico-home"></a>
+			<div class="l-list-banner">
+				<img class="w100" src="{{banner}}" alt="">
+			</div>
+			<ul class="l-artcle-list">
+				{{each articles as artcle i}}
+					<li>
+						<a href="{{artcle.link}}">
+							<div class="l-artcle-list-info">
+								<p>{{artcle.title}}</p>
+								<span class="l-artcle-list-time">{{artcle.post_date}}</span>
+							</div>
+							<img src="{{artcle.picture}}">
+						</a>	
+					</li>
+				{{/each}}
+			</ul>
+		</div>
+	</script>
+	<script type="text/javascript" src="js/template.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>		
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
