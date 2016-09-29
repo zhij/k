@@ -11,6 +11,7 @@ var data = {
 
 function init(){
 
+
 	// 底部菜单
 	$(".m-footer-nav .item").click(function(e){
 		e.stopPropagation();
@@ -48,14 +49,22 @@ function init(){
 
 
 function getArticles(key){
+    var url =  URL_PREFIX + '/index.php' 
+    var _data = { 
+        key: key, 
+        type: 'recommended',
+        controller: 'article',
+        action: 'lists',
+    }
 	$.ajax({
 		type: 'GET',
-		url: 'http://localhost:6330/recommendArticle',
+		url: url,
 		dataType: 'json',
-		data: { key: key},
+		data: _data,
 		success: function(res){
 			if(res.error == 0){
-				data.sections.push( { articles: res.data.articles } )
+				//data.sections.push( { articles: res.data.articles } )
+				data.sections.push( res.data  )
 				renderArticles();
 			}
 		}
@@ -71,6 +80,14 @@ function renderArticles(){
 		})
 		$(".m-content").html(html);
 		$(window).scrollTop(document.documentElement.scrollHeight);
+
+        // 跳转到全部的路由 
+        $(".m-panel-btn-tatal").click(function(e){
+            e.stopPropagation();
+            var key = $(this).data("key")
+            gRouter.setRoute('articleList/'+key)
+        });
+
 	}
 }
 
@@ -87,11 +104,18 @@ function renderMenus(){
 getArticles("welcomeM");
 
 function getMenus(){
+    var url =  URL_PREFIX + '/index.php' 
+    var _data = { 
+        controller: 'article',
+        action: 'menus',
+    }
+
 	// 获取底部菜单
 	$.ajax({
 		type: 'GET',
-		url: 'http://localhost:6330/menus',
+		url: url,
 		dataType: 'json',
+        data: _data,
 		success: function(res){
 			if(res.error == 0){
 				data.button = res.data.button;

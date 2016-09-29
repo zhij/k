@@ -1,0 +1,11 @@
+{{each articles as artcle i}}
+<li>
+<a href="{{artcle.link}}">
+    <div class="l-artcle-list-info">
+        <p>{{artcle.title}}</p>
+        <span class="l-artcle-list-time">{{artcle.post_date}}</span>
+    </div>
+    <img src="{{artcle.picture}}">
+</a>	
+</li>
+{{/each}}

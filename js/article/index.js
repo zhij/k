@@ -1,11 +1,14 @@
 var menuRouteEntry = require('./menu')
-var articleDetailsRouterEntry = require('./articleDetails')
+var articleDetailsRouteEntry = require('./articleDetails')
+var articleListRouteEntry = require('./articleList')
 
 // 路由配置
 var routes = {
-    menu: menuRouteEntry,
-    articleDetails: articleDetailsRouterEntry,
+    '/menu': menuRouteEntry,
+    'articleDetails': articleDetailsRouteEntry,
+    'articleList/:key' : articleListRouteEntry,
 }
-var router = Router(routes);
-router.init(['/menu']);
+
+gRouter = Router(routes);
+gRouter.init(['/menu']);
 

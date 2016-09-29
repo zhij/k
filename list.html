@@ -13,25 +13,6 @@
 <body class="bgeee">
 	<div id="container"></div>
 	<script id="tpl-artcle-list" type="text/template">
-		<div class="l-list">
-			<a href="" class="ico-home"></a>
-			<div class="l-list-banner">
-				<img class="w100" src="{{banner}}" alt="">
-			</div>
-			<ul class="l-artcle-list">
-				{{each articles as artcle i}}
-					<li>
-						<a href="{{artcle.link}}">
-							<div class="l-artcle-list-info">
-								<p>{{artcle.title}}</p>
-								<span class="l-artcle-list-time">{{artcle.post_date}}</span>
-							</div>
-							<img src="{{artcle.picture}}">
-						</a>	
-					</li>
-				{{/each}}
-			</ul>
-		</div>
 	</script>
 	<script type="text/javascript" src="js/template.js"></script>
 	<script type="text/javascript" src="js/jquery.min.js"></script>

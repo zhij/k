@@ -18,5 +18,8 @@
 			{{/if}}
 		{{/each}}
 	</ul>
-	<a class="m-panel-btn-tatal" href="javascript:;">查看全部</a>
+
+    {{if key !== 'welcomeM' }}
+    <a class="m-panel-btn-tatal" href="javascript:;" data-key="{{key}}" >查看全部</a>
+    {{/if}}
 </section>

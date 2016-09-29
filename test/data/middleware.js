@@ -37,16 +37,19 @@ function handleArticle (req, res, next) {
             return res.send( mockData.menus ) 
 
         case 'lists' : 
+
             if( req.query.type === 'recommended' ) {
                 if( req.query.key === 'relatedHardwareM' ) {
-                    res.send( mockData.recommendGoods ) 
+                    retData = clone( mockData.recommendGoods ) 
                 } else{
-                    res.send( mockData.recommendArticle ) 
+                    retData = clone( mockData.recommendArticle ) 
                 } 
             } else if ( req.query.type === 'all'  ) {
-                res.send( mockData.allArticles ) 
+                retData = clone( mockData.allArticles ) 
             }
 
+            retData.data.key = req.query.key
+            res.send( retData ) 
             return 
 
         case 'view' : 
