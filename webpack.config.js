@@ -23,9 +23,17 @@ var webpackConfig = {
 
     module: {
         loaders: [
+            //{
+                //test: /\.html/, 
+                //include: path.resolve(__dirname, 'tpl/ares'),
+                //loader:'art-template' 
+            //},
             {
-                test: /\.tpl$/, 
-                loader:'art-template' ,
+                test: /\.html/, 
+                include: [
+                    path.resolve(__dirname, 'tpl/ares'), 
+                    path.resolve(__dirname, 'tpl/articles')],
+                loader:'tmodjs' 
             },
             { 
                 test: /\.(png|jpg|gif|jpeg)$/, 

@@ -1,3 +1,6 @@
+
+var aresTpl = require('../../tpl/ares/ares.html')
+
 function Ares(partnerId, employeeSn){
     this.id = partnerId;
     this.sn = employeeSn;
@@ -43,7 +46,8 @@ Ares.prototype.render = function(){
     if (!this.data ) {
         return  
     }
-    var html = template('ares', this.data  );
+    //var html = template('ares', this.data  );
+    var html = aresTpl ( this.data );
     document.getElementById('center').innerHTML = html;
 }
 

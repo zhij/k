@@ -16,13 +16,16 @@
     "debugServer": "node debug json-server path ./test/data/mockdata.js --port 6330 --routes  ./test/data/routes.json --middlewares ./test/data/middleware.js ",
     "build": "npm run clean && NODE_ENV=production webpack -p --progress --colors --profile"
   },
-  "author": "", 
+  "author": "",
   "license": "ISC",
   "devDependencies": {
+    "art-template-loader": "^0.1.4",
     "grunt": "^1.0.1",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-run": "^0.6.0",
     "merge": "^1.2.0",
+    "tmod-loader": "0.0.3",
+    "tmodjs-loader": "^1.0.1",
     "webpack": "^1.13.2",
     "webpack-dev-middleware": "^1.8.2",
     "webpack-dev-server": "^1.16.1",

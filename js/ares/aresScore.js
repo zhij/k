@@ -1,3 +1,6 @@
+
+var aresScoreTpl = require('../../tpl/ares/aresScore.html')
+
 function AresScore(partnerId, employeeSn){
     this.id = partnerId;
     this.sn = employeeSn;
@@ -75,14 +78,15 @@ AresScore.prototype.render = function(){
         data[key] = this.scoreData[key]
     }
 
-    var html = template('aresScore', data);
+    //var html = template('aresScore', data);
+    var html = aresScoreTpl ( data );
     document.getElementById('center').innerHTML = html;
 }
 
 function aresScoreRouteEntry (){
     console.log('aresScoreRouteEntry')
     if( ! gData.aresScore ) {
-        gData.aresScore =  new AresScore(partner_id, employee_sn)
+        gData.aresScore =  new AresScore(gPartner_id, gEmployee_sn)
     }
     gData.aresScore.init()
 }

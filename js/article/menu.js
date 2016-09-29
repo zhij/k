@@ -1,3 +1,8 @@
+
+var panelTpl = require('../../tpl/articles/panel.html')
+var menuTpl = require('../../tpl/articles/menu.html')
+
+
 var data = {
 	button: null,
 	sections: [],
@@ -61,7 +66,8 @@ function renderArticles(){
 	if(data.sections.length ){
 		var html = ''
 		data.sections.forEach(function(item){
-			html += template("panel", item)
+			//html += template("panel", item)
+			html += panelTpl(item)
 		})
 		$(".m-content").html(html);
 		$(window).scrollTop(document.documentElement.scrollHeight);
@@ -70,7 +76,8 @@ function renderArticles(){
 
 function renderMenus(){
 	if(data.button){
-		var html = template("menu", data);
+		//var html = template("menu", data);
+		var html = menuTpl ( data);
 		$("#container").html(html);
 		init();
 	}

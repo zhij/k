@@ -1,3 +1,6 @@
+ 
+var aresStoreTpl = require('../../tpl/ares/aresStore.html')
+
 function AresStore(partnerId, employeeSn){
     this.id = partnerId;
     this.sn = employeeSn;
@@ -56,7 +59,8 @@ AresStore.prototype.render = function(){
         return  
     }
     var data = this.data
-    var html = template('aresStore', data);
+    //var html = template('aresStore', data);
+    var html = aresStoreTpl(data);
     document.getElementById('center').innerHTML = html;
     
 
@@ -91,7 +95,7 @@ AresStore.prototype.render = function(){
 
 function aresStoreRouteEntry (){
     if( ! gData.aresStore ) {
-        gData.aresStore =  new AresStore(partner_id, employee_sn)
+        gData.aresStore =  new AresStore(gPartner_id, gEmployee_sn)
     }
     gData.aresStore.init()
 }
