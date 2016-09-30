@@ -45,7 +45,13 @@ function handleArticle (req, res, next) {
                     retData = clone( mockData.recommendArticle ) 
                 } 
             } else if ( req.query.type === 'all'  ) {
-                retData = clone( mockData.allArticles ) 
+                if( parseInt(req.query.page ) < 4 ) {
+                    retData = clone( mockData.allArticles ) 
+                } else {
+                    retData = clone( mockData.allArticles ) 
+                    // 返回为数组
+                    retData.data.articles = []
+                }
             }
 
             retData.data.key = req.query.key

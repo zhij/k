@@ -2,6 +2,8 @@ var articleListTpl = require('../../tpl/articles/articleList.html');
 
 var articleListListTpl = require('../../tpl/articles/articleListList.html')
 
+var InfiniteScroll = require('./infiniteScroll')
+
 function ArticleList (key){
     this.key = key
     this.firstRender = true 
@@ -18,9 +20,9 @@ ArticleList.prototype.getKey = function(){
 ArticleList.prototype.init = function(){
     this.firstRender = true 
 
+
     if( ! this.data ) {
         this.getMoreData()        
-        this.curPage ++
     } else {
         this.render() 
     }
@@ -39,9 +41,16 @@ ArticleList.prototype.getData = function(page, _limit){
     }
     var mv = this
     $.getJSON( url, urlObj, function(data){
-        if(data.error == 0){
+        if(data.error !== 0){
+            return 
+        }
+        if( data.data && data.data.articles && data.data.articles.length ) {
             mv.transformData( data.data  )
             mv.render() 
+        } else {
+            //没有更多的数据 
+            $('.no-data-msg').show()
+            mv.unBindScroll()
         }
     })
 }
@@ -50,11 +59,22 @@ ArticleList.prototype.transformData = function(data){
     this.data = data
 }
 
+ArticleList.prototype.bindScroll = function(){
+    this.infinitScroll = new InfiniteScroll('.l-list-bottom', this.getMoreData.bind(this) )
+    this.infinitScroll.bind()
+}
+
+ArticleList.prototype.unBindScroll = function(){
+    if( this.infinitScroll ) {
+        this.infinitScroll.unBind()
+        this.infinitScroll = null 
+    }
+}
+
 ArticleList.prototype.render = function(){
     if (!this.data ) {
         return  
     }
-
     var html 
     if( this.firstRender ) {
        this.totalData = this.data 
@@ -62,13 +82,16 @@ ArticleList.prototype.render = function(){
        $("#view-page").html(html);
 
        this.firstRender = false
+       this.bindScroll()
+
     } else {
-        html = articleListListTpl ( this.data.articles  );
+        html = articleListListTpl ( this.data );
         $(".l-artcle-list").append(html);
 
-        this.totalData.articles = this.totalData.articles.concat( this.data.articles ) 
+        this.totalData.articles = this.totalData.articles.concat( this.data ) 
     }
 }
+
 
 ArticleList.prototype.getMoreData = function(){
     this.getData( this.curPage )        
@@ -76,8 +99,9 @@ ArticleList.prototype.getMoreData = function(){
 }
 
 function articleListRouteEntry (key){
-    // TODO key 为null  跳转的到menu页
+    // key 为null  跳转的到menu页
     if( ! key ) {
+        gRouter.setRoute('/menu')
         return  
     }
 
@@ -86,6 +110,7 @@ function articleListRouteEntry (key){
     } 
 
     gData.articleList.init()
+
 }
 
 module.exports = articleListRouteEntry 
