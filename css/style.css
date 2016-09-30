@@ -686,9 +686,6 @@ a {
 .l-list {
   background-color: #fff; }
 
-.l-list-banner {
-  position: fixed; }
-
 .l-artcle-list, .artcile-guess-you-like-list {
   border-bottom: 1px solid #ddd; }
   .l-artcle-list li, .artcile-guess-you-like-list li {
