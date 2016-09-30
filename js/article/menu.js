@@ -100,8 +100,6 @@ function renderMenus(){
 	}
 }
 
-// 默认推送
-getArticles("welcomeM");
 
 function getMenus(){
     var url =  URL_PREFIX + '/index.php' 
@@ -125,13 +123,23 @@ function getMenus(){
 	});
 }
 
-getMenus();
-
+var gFirstEnter = true 
 
 function menuRouteEntry(){
 	$("#view-page").html('<div class="m-content" id="js-m-content"></div><div id="container"></div>');
-	renderMenus();
-	renderArticles();
+
+    if( gFirstEnter ) {
+        // 默认推送
+        getArticles("welcomeM");
+        getMenus();
+        gFirstEnter = false 
+
+    } else {
+        renderMenus();
+        renderArticles();
+    }
+
+
 }
 
 
